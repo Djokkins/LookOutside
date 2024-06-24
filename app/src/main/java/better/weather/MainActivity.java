@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         //maybe get gps data for coordinates
         //get data from 3rd party api
         //save data somewhere were all fragments can reach
-
+        new WeatherAPITask().RequestWeatherDataFromAPI(56.1518, 10.2064);
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

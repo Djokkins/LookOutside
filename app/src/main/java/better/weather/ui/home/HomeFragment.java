@@ -24,8 +24,11 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        TextView tempView = binding.currentTempTextView;
+        TextView conditionView = binding.conditionTextView;
+        TextView humidityView = binding.humidityTextView;
+
+        homeViewModel.getTemp().observe(getViewLifecycleOwner(), tempView::setText);
         return root;
     }
 
